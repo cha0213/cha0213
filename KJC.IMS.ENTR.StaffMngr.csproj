@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67CB4FC1-D9A7-449F-8087-32AC3C725433}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KJC.IMS.ENTR.StaffMngr</RootNamespace>
+    <AssemblyName>KJC.IMS.ENTR.StaffMngr</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IFW.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\IFW.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IFW.Data, Version=1.0.0.3, Culture=neutral, PublicKeyToken=6b3a265306332740, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\IFW.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="IFW.Data.SqlClient, Version=1.0.0.3, Culture=neutral, PublicKeyToken=6b3a265306332740, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\IFW.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\System.Data.SQLite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcademicStatistics.aspx" />
+    <Content Include="amApplicationExcel.aspx" />
+    <Content Include="amExamination.aspx" />
+    <Content Include="amInterNetUpdate.aspx" />
+    <Content Include="amApplicationScoreList.aspx" />
+    <Content Include="amPassChkSubRankSMS.aspx" />
+    <Content Include="amPassPreviewSMS.aspx" />
+    <Content Include="ApplDuplicationStatistics.aspx" />
+    <Content Include="ApplEngineeringStatistics.aspx" />
+    <Content Include="ApplGuideMsgPopUP.aspx" />
+    <Content Include="ApplMajorGuideMsgMngr2.aspx" />
+    <Content Include="ApplScoreUpload.aspx" />
+    <Content Include="ApplScoreUpload6.aspx" />
+    <Content Include="ApplSearchInfoMngr.aspx" />
+    <Content Include="ApplSearchReportPeriodCheck.aspx" />
+    <Content Include="ApplSearchReportView.aspx" />
+    <Content Include="ApplSearchReportViewXml.aspx" />
+    <Content Include="ConsignmentByAge.aspx" />
+    <Content Include="ConsignmentCompanyStatus.aspx" />
+    <Content Include="ConsignmentRecruitmentResult.aspx" />
+    <Content Include="DegreeCourseByAge.aspx" />
+    <Content Include="DegreeCourseCareer.aspx" />
+    <Content Include="DegreeCourseEnterPeriod.aspx" />
+    <Content Include="DegreeCourseFormerSchool.aspx" />
+    <Content Include="DegreeCourseRecruitmentResult.aspx" />
+    <Content Include="FreshmanFeeEnrollStatistics2.aspx" />
+    <Content Include="FreshmanFeeEnrollStatistics.aspx" />
+    <Content Include="FreshmanFinalRecruitment.aspx" />
+    <Content Include="highClassGradeList22.aspx" />
+    <Content Include="highClassGradeList4.aspx" />
+    <Content Include="highClassGradeList5.aspx" />
+    <Content Include="highClassGradeList8.aspx" />
+    <Content Include="highClassGradeList9.aspx" />
+    <Content Include="highClassTest.aspx" />
+    <Content Include="amPassSMSMngr.aspx" />
+    <Content Include="highSchoolList.aspx" />
+    <Content Include="highSchoolScoreInput5.aspx" />
+    <Content Include="highSchoolScoreInput6.aspx" />
+    <Content Include="highSchoolScoreRatingStatistics.aspx" />
+    <Content Include="highSchoolScoreStatistics.aspx" />
+    <Content Include="highSchoolScoreStatistics2.aspx" />
+    <Content Include="RecruitmentPeriodRegistrationStatistics.aspx" />
+    <Content Include="SendSMSMajor.aspx" />
+    <Content Include="SendSMSAppl.aspx" />
+    <Content Include="amPassChkDetail.aspx" />
+    <Content Include="amPassChk.aspx" />
+    <Content Include="SuccessfulCandidateStatistics.aspx" />
+    <Content Include="SupportFreshmenReport_xml.aspx" />
+    <Content Include="TM.aspx" />
+    <Content Include="ApplMajorGuideMsgMngr.aspx" />
+    <Content Include="ApplMajorGuideMsgPopUp.aspx" />
+    <Content Include="ApplSearch.aspx" />
+    <Content Include="highSchoolScoreExclusionMngr.aspx" />
+    <Content Include="highSchoolScoreInput2.aspx" />
+    <Content Include="ApplSearchPrintInfo.aspx" />
+    <Content Include="highSchoolScoreInput3.aspx" />
+    <Content Include="highSchoolScoreInput.aspx" />
+    <Content Include="highSchoolScoreInput4.aspx" />
+    <Content Include="QualificationScoreUpload.aspx" />
+    <Content Include="QualificationScoreMngr.aspx" />
+    <Content Include="highSchoolScoreUpload.aspx" />
+    <Content Include="amApplicationInterView.aspx" />
+    <Content Include="enterReceiveAppl.aspx" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcademicStatistics.aspx.cs">
+      <DependentUpon>AcademicStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcademicStatistics.aspx.designer.cs">
+      <DependentUpon>AcademicStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amApplicationExcel.aspx.cs">
+      <DependentUpon>amApplicationExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amApplicationExcel.aspx.designer.cs">
+      <DependentUpon>amApplicationExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amExamination.aspx.cs">
+      <DependentUpon>amExamination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amExamination.aspx.designer.cs">
+      <DependentUpon>amExamination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amInterNetUpdate.aspx.cs">
+      <DependentUpon>amInterNetUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amInterNetUpdate.aspx.designer.cs">
+      <DependentUpon>amInterNetUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amApplicationScoreList.aspx.cs">
+      <DependentUpon>amApplicationScoreList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amApplicationScoreList.aspx.designer.cs">
+      <DependentUpon>amApplicationScoreList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassChkSubRankSMS.aspx.cs">
+      <DependentUpon>amPassChkSubRankSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassChkSubRankSMS.aspx.designer.cs">
+      <DependentUpon>amPassChkSubRankSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassPreviewSMS.aspx.cs">
+      <DependentUpon>amPassPreviewSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassPreviewSMS.aspx.designer.cs">
+      <DependentUpon>amPassPreviewSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplDuplicationStatistics.aspx.cs">
+      <DependentUpon>ApplDuplicationStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplDuplicationStatistics.aspx.designer.cs">
+      <DependentUpon>ApplDuplicationStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplEngineeringStatistics.aspx.cs">
+      <DependentUpon>ApplEngineeringStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplEngineeringStatistics.aspx.designer.cs">
+      <DependentUpon>ApplEngineeringStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplGuideMsgPopUP.aspx.cs">
+      <DependentUpon>ApplGuideMsgPopUP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplGuideMsgPopUP.aspx.designer.cs">
+      <DependentUpon>ApplGuideMsgPopUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgMngr2.aspx.cs">
+      <DependentUpon>ApplMajorGuideMsgMngr2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgMngr2.aspx.designer.cs">
+      <DependentUpon>ApplMajorGuideMsgMngr2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplScoreUpload.aspx.cs">
+      <DependentUpon>ApplScoreUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplScoreUpload.aspx.designer.cs">
+      <DependentUpon>ApplScoreUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplScoreUpload6.aspx.cs">
+      <DependentUpon>ApplScoreUpload6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplScoreUpload6.aspx.designer.cs">
+      <DependentUpon>ApplScoreUpload6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearchInfoMngr.aspx.cs">
+      <DependentUpon>ApplSearchInfoMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearchInfoMngr.aspx.designer.cs">
+      <DependentUpon>ApplSearchInfoMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearchReportPeriodCheck.aspx.cs">
+      <DependentUpon>ApplSearchReportPeriodCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearchReportPeriodCheck.aspx.designer.cs">
+      <DependentUpon>ApplSearchReportPeriodCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearchReportView.aspx.cs">
+      <DependentUpon>ApplSearchReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearchReportView.aspx.designer.cs">
+      <DependentUpon>ApplSearchReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearchReportViewXml.aspx.cs">
+      <DependentUpon>ApplSearchReportViewXml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearchReportViewXml.aspx.designer.cs">
+      <DependentUpon>ApplSearchReportViewXml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignmentByAge.aspx.cs">
+      <DependentUpon>ConsignmentByAge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsignmentByAge.aspx.designer.cs">
+      <DependentUpon>ConsignmentByAge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignmentCompanyStatus.aspx.cs">
+      <DependentUpon>ConsignmentCompanyStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsignmentCompanyStatus.aspx.designer.cs">
+      <DependentUpon>ConsignmentCompanyStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignmentRecruitmentResult.aspx.cs">
+      <DependentUpon>ConsignmentRecruitmentResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsignmentRecruitmentResult.aspx.designer.cs">
+      <DependentUpon>ConsignmentRecruitmentResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeCourseByAge.aspx.cs">
+      <DependentUpon>DegreeCourseByAge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DegreeCourseByAge.aspx.designer.cs">
+      <DependentUpon>DegreeCourseByAge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeCourseCareer.aspx.cs">
+      <DependentUpon>DegreeCourseCareer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DegreeCourseCareer.aspx.designer.cs">
+      <DependentUpon>DegreeCourseCareer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeCourseEnterPeriod.aspx.cs">
+      <DependentUpon>DegreeCourseEnterPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DegreeCourseEnterPeriod.aspx.designer.cs">
+      <DependentUpon>DegreeCourseEnterPeriod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeCourseFormerSchool.aspx.cs">
+      <DependentUpon>DegreeCourseFormerSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DegreeCourseFormerSchool.aspx.designer.cs">
+      <DependentUpon>DegreeCourseFormerSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeCourseRecruitmentResult.aspx.cs">
+      <DependentUpon>DegreeCourseRecruitmentResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DegreeCourseRecruitmentResult.aspx.designer.cs">
+      <DependentUpon>DegreeCourseRecruitmentResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreshmanFeeEnrollStatistics.aspx.cs">
+      <DependentUpon>FreshmanFeeEnrollStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreshmanFeeEnrollStatistics.aspx.designer.cs">
+      <DependentUpon>FreshmanFeeEnrollStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreshmanFeeEnrollStatistics2.aspx.cs">
+      <DependentUpon>FreshmanFeeEnrollStatistics2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreshmanFeeEnrollStatistics2.aspx.designer.cs">
+      <DependentUpon>FreshmanFeeEnrollStatistics2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreshmanFinalRecruitment.aspx.cs">
+      <DependentUpon>FreshmanFinalRecruitment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreshmanFinalRecruitment.aspx.designer.cs">
+      <DependentUpon>FreshmanFinalRecruitment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassGradeList22.aspx.cs">
+      <DependentUpon>highClassGradeList22.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassGradeList22.aspx.designer.cs">
+      <DependentUpon>highClassGradeList22.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassGradeList4.aspx.cs">
+      <DependentUpon>highClassGradeList4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassGradeList4.aspx.designer.cs">
+      <DependentUpon>highClassGradeList4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassGradeList5.aspx.cs">
+      <DependentUpon>highClassGradeList5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassGradeList5.aspx.designer.cs">
+      <DependentUpon>highClassGradeList5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassGradeList8.aspx.cs">
+      <DependentUpon>highClassGradeList8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassGradeList8.aspx.designer.cs">
+      <DependentUpon>highClassGradeList8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassGradeList9.aspx.cs">
+      <DependentUpon>highClassGradeList9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassGradeList9.aspx.designer.cs">
+      <DependentUpon>highClassGradeList9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highClassTest.aspx.cs">
+      <DependentUpon>highClassTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highClassTest.aspx.designer.cs">
+      <DependentUpon>highClassTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassSMSMngr.aspx.cs">
+      <DependentUpon>amPassSMSMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassSMSMngr.aspx.designer.cs">
+      <DependentUpon>amPassSMSMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolList.aspx.cs">
+      <DependentUpon>highSchoolList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolList.aspx.designer.cs">
+      <DependentUpon>highSchoolList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput5.aspx.cs">
+      <DependentUpon>highSchoolScoreInput5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput5.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput6.aspx.cs">
+      <DependentUpon>highSchoolScoreInput6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput6.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreRatingStatistics.aspx.cs">
+      <DependentUpon>highSchoolScoreRatingStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreRatingStatistics.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreRatingStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreStatistics.aspx.cs">
+      <DependentUpon>highSchoolScoreStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreStatistics.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreStatistics2.aspx.cs">
+      <DependentUpon>highSchoolScoreStatistics2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreStatistics2.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreStatistics2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecruitmentPeriodRegistrationStatistics.aspx.cs">
+      <DependentUpon>RecruitmentPeriodRegistrationStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecruitmentPeriodRegistrationStatistics.aspx.designer.cs">
+      <DependentUpon>RecruitmentPeriodRegistrationStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendSMSMajor.aspx.cs">
+      <DependentUpon>SendSMSMajor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendSMSMajor.aspx.designer.cs">
+      <DependentUpon>SendSMSMajor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendSMSAppl.aspx.cs">
+      <DependentUpon>SendSMSAppl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendSMSAppl.aspx.designer.cs">
+      <DependentUpon>SendSMSAppl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassChkDetail.aspx.cs">
+      <DependentUpon>amPassChkDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassChkDetail.aspx.designer.cs">
+      <DependentUpon>amPassChkDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassChk.aspx.cs">
+      <DependentUpon>amPassChk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassChk.aspx.designer.cs">
+      <DependentUpon>amPassChk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessfulCandidateStatistics.aspx.cs">
+      <DependentUpon>SuccessfulCandidateStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessfulCandidateStatistics.aspx.designer.cs">
+      <DependentUpon>SuccessfulCandidateStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportFreshmenReport_xml.aspx.cs">
+      <DependentUpon>SupportFreshmenReport_xml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportFreshmenReport_xml.aspx.designer.cs">
+      <DependentUpon>SupportFreshmenReport_xml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM.aspx.cs">
+      <DependentUpon>TM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM.aspx.designer.cs">
+      <DependentUpon>TM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgMngr.aspx.cs">
+      <DependentUpon>ApplMajorGuideMsgMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgMngr.aspx.designer.cs">
+      <DependentUpon>ApplMajorGuideMsgMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgPopUp.aspx.cs">
+      <DependentUpon>ApplMajorGuideMsgPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplMajorGuideMsgPopUp.aspx.designer.cs">
+      <DependentUpon>ApplMajorGuideMsgPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearch.aspx.cs">
+      <DependentUpon>ApplSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearch.aspx.designer.cs">
+      <DependentUpon>ApplSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreExclusionMngr.aspx.cs">
+      <DependentUpon>highSchoolScoreExclusionMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreExclusionMngr.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreExclusionMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput2.aspx.cs">
+      <DependentUpon>highSchoolScoreInput2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput2.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplSearchPrintInfo.aspx.cs">
+      <DependentUpon>ApplSearchPrintInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplSearchPrintInfo.aspx.designer.cs">
+      <DependentUpon>ApplSearchPrintInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput3.aspx.cs">
+      <DependentUpon>highSchoolScoreInput3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput3.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput.aspx.cs">
+      <DependentUpon>highSchoolScoreInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreInput4.aspx.cs">
+      <DependentUpon>highSchoolScoreInput4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreInput4.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreInput4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QualificationScoreUpload.aspx.cs">
+      <DependentUpon>QualificationScoreUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QualificationScoreUpload.aspx.designer.cs">
+      <DependentUpon>QualificationScoreUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QualificationScoreMngr.aspx.cs">
+      <DependentUpon>QualificationScoreMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QualificationScoreMngr.aspx.designer.cs">
+      <DependentUpon>QualificationScoreMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreUpload.aspx.cs">
+      <DependentUpon>highSchoolScoreUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreUpload.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amApplicationInterView.aspx.cs">
+      <DependentUpon>amApplicationInterView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amApplicationInterView.aspx.designer.cs">
+      <DependentUpon>amApplicationInterView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enterReceiveAppl.aspx.cs">
+      <DependentUpon>enterReceiveAppl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enterReceiveAppl.aspx.designer.cs">
+      <DependentUpon>enterReceiveAppl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="highSchoolScoreMngr.aspx.cs">
+      <DependentUpon>highSchoolScoreMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreMngr.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="highSchoolScoreCalculateMngr.aspx.cs">
+      <DependentUpon>highSchoolScoreCalculateMngr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="highSchoolScoreCalculateMngr.aspx.designer.cs">
+      <DependentUpon>highSchoolScoreCalculateMngr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="amPassList.aspx.cs">
+      <DependentUpon>amPassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="amPassList.aspx.designer.cs">
+      <DependentUpon>amPassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudNoAdd.aspx.cs">
+      <DependentUpon>StudNoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudNoAdd.aspx.designer.cs">
+      <DependentUpon>StudNoAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top20HighSchoolStatistics.aspx.cs">
+      <DependentUpon>Top20HighSchoolStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top20HighSchoolStatistics.aspx.designer.cs">
+      <DependentUpon>Top20HighSchoolStatistics.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\IFW.AspNet\IFW.AspNet.csproj">
+      <Project>{6564cbff-9b29-4896-8d2a-d3462eeeccbe}</Project>
+      <Name>IFW.AspNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\COFF\COMM.BIZ\KJC.IMS.COFF.COMM.BIZ.csproj">
+      <Project>{301366b0-1f59-40ff-9d75-9c8f51b0cbd3}</Project>
+      <Name>KJC.IMS.COFF.COMM.BIZ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\COFF\CONTROL\KJC.IMS.COFF.CONTROL.csproj">
+      <Project>{99131e19-389d-4c3f-912f-26177a7d2de9}</Project>
+      <Name>KJC.IMS.COFF.CONTROL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IFW.WebUI\IFW.WebUI.csproj">
+      <Project>{7f5934b1-b782-451d-99bf-876331b4d579}</Project>
+      <Name>IFW.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="highSchoolScoreMngr.aspx" />
+    <Content Include="highSchoolScoreCalculateMngr.aspx" />
+    <Content Include="amPassList.aspx" />
+    <Content Include="StudNoAdd.aspx" />
+    <Content Include="Top20HighSchoolStatistics.aspx" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mrd\PassInfo.mrd" />
+    <Content Include="mrd\PassInfo78.mrd" />
+    <Content Include="mrd\PassInfo9.mrd" />
+    <Content Include="mrd\PassInfoE.mrd" />
+    <Content Include="mrd\rptPassNotice.mrd" />
+    <Content Include="mrd\rptScholarship.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView10.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView2.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView7.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView7All.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView8.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView8All.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView9.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView9_one.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView9_score.mrd" />
+    <Content Include="mrd\rptamAppicationScoreListInterView_score.mrd" />
+    <Content Include="mrd\rptEnterAppTesttag.mrd" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54393</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:20032/SYST/SYSTEM</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:20032/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
