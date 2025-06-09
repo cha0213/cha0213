@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplSearchReportViewXml.aspx.cs" Inherits="KJC.IMS.ENTR.StaffMngr.ApplSearchReportViewXml" %>
