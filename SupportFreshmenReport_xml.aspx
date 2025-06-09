@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SupportFreshmenReport_xml.aspx.cs" Inherits="KJC.IMS.ENTR.StaffMngr.SupportFreshmenReport_xml" %>
